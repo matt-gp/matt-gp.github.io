@@ -1,6 +1,7 @@
 # Site settings
 title: "Matt GP"
 url: "https://matt-gp.github.io"
+baseurl: ""
 
 # Personal info
 github_username: matt-gp
