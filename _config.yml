@@ -1,0 +1,96 @@
+# Site settings
+title: "Matt GP"
+url: "https://matt-gp.github.io"
+
+# Personal info
+github_username: matt-gp
+linkedin_username: matt-goodship-patience
+linkedin_profile_username: matt-goodship-patience-535ba499
+# email: intentionally omitted to avoid spam - contact via LinkedIn
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Simple about section
+about:
+  bio: |
+    SRE/Platform/DevOps Engineer with a passion for building reliable, scalable systems and improving observability.
+
+# Projects section - Add your projects here
+projects:
+  - name: "OTEL LGTM Proxy"
+    description: "OpenTelemetry proxy for LGTM stack integration with monitoring and observability features"
+    summary: |
+      A way to route Opentelemetry Logs/Metrics/Traces to a LGTM stack, using the resource attributes as the tenant header.
+
+      Use case would be that you are running a multi-tenant Kubernetes cluster and you give each tenant a namespace (or multiple namespaces) and you want to make sure that
+      each tenant's telemetry data is isolated and routed to their own dedicated LGTM stack instance.
+
+      This proxy also allows to set defaults aswell so that if the label isn't present on the resource, it will use the default value. This is useful if you can't tag certain
+      resources but want to reoute their telemetry to an SRE/Platform team's LGTM stack.
+
+      This proxy is built in Go using the OpenTelemetry Collector framework, making it efficient and easy to deploy in cloud-native environments.
+    repo: "otel-lgtm-proxy"
+    tech_stack: ["Go", "Docker", "OpenTelemetry"]
+    
+  - name: "OIDC Authorizer"
+    description: "OpenID Connect authorization service for secure API access and user authentication"
+    summary: |
+      A lambda authorizer for API Gateway that validates JWT tokens issued by OpenID Connect providers.
+      It ensures secure access to your APIs by verifying token integrity, expiration, and scopes.
+
+      Works dynamically with V1, V2 and Websocket Authorizer payloads.
+
+      This authorizer is built in Go and leverages the OpenTelemetry framework for observability.
+    repo: "oidc-authorizer" 
+    tech_stack: ["Go", "OpenTelemetry", "OAuth2"]
+  
+  # Add more projects here following the same format:
+  # - name: "Project Name"
+  #   description: "Brief one-line description for listings"
+  #   summary: |
+  #     Detailed multi-paragraph summary that explains:
+  #     - What the project does in detail
+  #     - Key features and capabilities
+  #     - Technical architecture or approach
+  #     - Use cases or problems it solves
+  #   repo: "repository-name"
+  #   tech_stack: ["Technology", "Stack", "Used"]
+  #   demo_url: "https://optional-demo-link.com"
+  #   blog_post: "/blog/optional-blog-post"
+
+# Open Source Contributions - Add your open source work here
+open_source:
+  # Example format for open source contributions:
+  # - name: "Project Name"
+  #   description: "Brief description of your contribution or the project"
+  #   summary: |
+  #     Detailed explanation of your contribution to this open source project:
+  #     - What you contributed (features, bug fixes, documentation)
+  #     - Impact of your contribution
+  #     - Technologies used
+  #     - Community involvement or maintainer status
+  #   repo: "owner/repository-name"  # Format: owner/repo for external projects
+  #   contribution_type: ["Feature", "Bug Fix", "Documentation", "Maintainer"]
+  #   tech_stack: ["Technology", "Stack", "Used"]
+  #   pr_url: "https://github.com/owner/repo/pull/123"  # Optional: link to specific PR
+  #   issue_url: "https://github.com/owner/repo/issues/456"  # Optional: link to issue
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
