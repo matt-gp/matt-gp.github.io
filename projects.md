@@ -1,5 +1,5 @@
 ---
-layout: clean
+layout: page
 title: Projects
 permalink: /projects/
 ---
@@ -35,4 +35,3 @@ Here are some of the projects I've been working on:
 ---
 {% endfor %}
 
-You can find all my code on [GitHub](https://github.com/{{ site.github_username }}).
