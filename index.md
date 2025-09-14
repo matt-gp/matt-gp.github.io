@@ -1,5 +1,5 @@
 ---
-layout: clean
+layout: page
 ---
 
 {{ site.about.bio }}
@@ -54,5 +54,5 @@ layout: clean
 
 ## Get in Touch
 
-- GitHub: [{{ site.github_username }}](https://github.com/{{ site.github_username }})
-- LinkedIn: [{{ site.linkedin_username }}](https://www.linkedin.com/in/{{ site.linkedin_profile_username }})
+- **GitHub:** [{{ site.github_username }}](https://github.com/{{ site.github_username }})
+- **LinkedIn:** [{{ site.linkedin_username }}](https://www.linkedin.com/in/{{ site.linkedin_profile_username }})
