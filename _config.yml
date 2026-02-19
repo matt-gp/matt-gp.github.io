@@ -66,6 +66,20 @@ projects:
 
 # Open Source Contributions - Add your open source work here
 open_source:
+  - name: Prometheus
+    description: "Contributed to the Prometheus monitoring system creating and supporting the AWS Service Discovery Plugin."
+    summary: |
+      The AWS Service Discovery plugin for Prometheus allows users to automatically discover and scrape metrics from AWS services, such as EC2 instances, ECS tasks, MSK clusters, and Elasticache instances. This contribution involved:
+      - Implementing the plugin to integrate with AWS APIs for service discovery
+      - Ensuring compatibility with Prometheus' service discovery framework
+      - Writing documentation to help users set up and use the plugin effectively
+      - Making sure that the plugin works with the existing Lightsail and EC2 service discovery mechanisms in Prometheus
+      - Engaging with the Prometheus community and becoming the Codeowner for the AWS Service Discovery Plugin, providing feedback and improvements
+      - Fixing bugs and reviewing PRs related to the plugin to maintain its functionality and reliability
+    repo: "prometheus/prometheus"
+    contribution_type: ["Bug Fix", "Documentation"]
+    tech_stack: ["Go", "Monitoring", "Open Source"]
+    pr_url: "https://github.com/prometheus/prometheus/pull/17406"
   # Example format for open source contributions:
   # - name: "Project Name"
   #   description: "Brief description of your contribution or the project"
